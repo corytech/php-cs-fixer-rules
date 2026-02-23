@@ -1,2 +1,2 @@
-# cs-fixer-rules
+# php-cs-fixer-rules
 Package for custom rules
