@@ -16,10 +16,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Php
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
       - name: Composer
         uses: php-actions/composer@v6
       - name: Check cs
-        run: vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php -v --diff --dry-run --using-cache=no .
+        run: ./vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php -v --diff --dry-run --using-cache=no .
   tests:
     name: Unit tests
     runs-on: ubuntu-latest
@@ -27,7 +31,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Php
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
       - name: Composer
         uses: php-actions/composer@v6
       - name: Run tests
-        run: vendor/bin/phpunit tests
+        run: ./vendor/bin/phpunit tests
