@@ -34,7 +34,6 @@ final class RemovePsalmSuppressFixerTest extends AbstractFixerTestCase
                     return;
                 }
             PHP,
-
         ];
     }
 }
