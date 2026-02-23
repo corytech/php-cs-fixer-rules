@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Corytech\PhpCsFixerRules;
 
-
 use PhpCsFixer\Fixer\FixerInterface;
 use PhpCsFixer\Fixer\WhitespacesAwareFixerInterface;
 use PhpCsFixer\FixerDefinition\CodeSample;
@@ -51,7 +50,7 @@ final class DtoConstructAttributeSeparationFixer implements FixerInterface, Whit
                 if ($nextComma) {
                     $newTokenId = $nextComma + 1;
                     if ($tokens[$newTokenId]->isGivenKind(\T_WHITESPACE)) {
-                        $tokens[$newTokenId] = new Token([\T_WHITESPACE, $lineEnding . $lineEnding]);
+                        $tokens[$newTokenId] = new Token([\T_WHITESPACE, $lineEnding.$lineEnding]);
                     }
                 }
             }

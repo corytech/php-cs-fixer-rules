@@ -21,12 +21,12 @@ return $config
         'cast_spaces' => ['space' => 'single'],
         'yoda_style' => ['equal' => false, 'identical' => false, 'less_and_greater' => false],
         'single_line_throw' => false,
-        'declare_strict_types' => true,
-        'nullable_type_declaration_for_default_null_value' => true,
         'class_definition' => [
             'single_line' => false,
         ],
         'phpdoc_to_comment' => false,
+        'nullable_type_declaration_for_default_null_value' => true,
+        'declare_strict_types' => true,
     ])
     ->setRiskyAllowed(true)
     ->setFinder($finder)
