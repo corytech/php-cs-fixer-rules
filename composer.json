@@ -5,7 +5,7 @@
   "keywords": ["php-cs-fixer"],
   "license": "MIT",
   "require": {
-    "php": ">=8.4",
+    "php": ">=8.3",
     "ext-filter": "*",
     "ext-tokenizer": "*",
     "friendsofphp/php-cs-fixer": "^3.84"
