@@ -51,7 +51,7 @@ final class DtoConstructAttributeSeparationFixer implements FixerInterface, Whit
                 if ($nextComma) {
                     $newTokenId = $nextComma + 1;
                     if ($tokens[$newTokenId]->isGivenKind(\T_WHITESPACE)) {
-                        $tokens[$newTokenId] = new Token([\T_WHITESPACE, $lineEnding.$lineEnding]);
+                        $tokens[$newTokenId] = new Token([\T_WHITESPACE, $lineEnding . $lineEnding]);
                     }
                 }
             }
@@ -113,7 +113,7 @@ final class DtoConstructAttributeSeparationFixer implements FixerInterface, Whit
 
     private function getNextPublicIndex(array $publics, int $index): ?int
     {
-        $prevPublicKeys = array_filter(array_keys($publics), function ($public) use ($index) {
+        $prevPublicKeys = array_filter(array_keys($publics), static function ($public) use ($index) {
             return $public > $index;
         });
 
